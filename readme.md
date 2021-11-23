@@ -8,9 +8,13 @@
 
 #### What is _Lighting Web Component_ (LWC) vs. _Aura_. 
 
+
 #### Setting up the Development Environment 
 
 1. Sign Up for Salesforce Developer Org [here](https://developer.salesforce.com/signup)
+    > username: rodriggj@provar.com
+    > password: T@********!
+    > url: https://provar-b6-dev-ed.my.salesforce.com
 
 2. Setup Salesforce DX Environment
 
@@ -31,7 +35,7 @@
         ```sfdx
         sfdx plugins --core
         ```
-        
+
     3. Install Extensions in Visual Studio Code
         - [ ] On the left-hand navbar will be a button labeled _Extensions_
         - [ ] Use the the Search feature to query for _Salesforce Extension Pack_ and install top hit
@@ -39,6 +43,8 @@
 > NOTE: In Visual Studio Code to initiate an integrated terminal session on a Mac type `Ctrl + ~`. When the terminal session comes up validate that you can execute commands like `sfdx`. If you **CANNOT** you may need to configure your `ENV PATH` to point to the `sfdx` download binaries. 
 
 3. Set up My Domain and Dev Hub
+    1. Navigate to your developer org login screen which you can access from `login.salesforce.com`
+
 
 4. Set up a Project and Dev Org
 ----
