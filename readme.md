@@ -12,11 +12,11 @@
 #### Setting up the Development Environment 
 
 1. Sign Up for Salesforce Developer Org [here](https://developer.salesforce.com/signup)
-> username: rodriggj@provar.com
->
-> password: T@********!
->
-> url: https://provar-b6-dev-ed.my.salesforce.com
+    > username: rodriggj@provar.com
+    >
+    > password: T@********!
+    >
+    > url: https://provar-b6-dev-ed.my.salesforce.com
 
 2. Setup Salesforce DX Environment
 
