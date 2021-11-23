@@ -19,15 +19,19 @@
 
     2. Install `Salesforce CLI`
         - [ ] Installation instruction for your platform can be found [here](https://developer.salesforce.com/tools/sfdxcli)
+
         - [ ] In a terminal session validate installation by running 
+
         ```sfdx
         sfdx
         ```
+
         - [ ] validate plugin installation also by running 
+
         ```sfdx
         sfdx plugins --core
         ```
-
+        
     3. Install Extensions in Visual Studio Code
         - [ ] On the left-hand navbar will be a button labeled _Extensions_
         - [ ] Use the the Search feature to query for _Salesforce Extension Pack_ and install top hit
