@@ -115,7 +115,7 @@ sfdx force:org:create -a lwcScratchOrg -d 30 -f config/project-scratch-def.json 
 > 
 > A successful result will render an image similar to the following, with a Scratch Org ID, and UserName defined.
 
-    <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143151330-29f134a3-c1f0-43dc-b71e-cc8a213067be.png" width="450"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/143151330-29f134a3-c1f0-43dc-b71e-cc8a213067be.png" width="450"></p>
 
 <sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
 
