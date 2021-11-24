@@ -91,7 +91,7 @@
 
     <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143151064-0e5e460c-7427-48c2-a709-ad15e64f8bc9.png" width="450"></p>
 
-    5. Now with this config change wer are not ready to create a Scratch Org. Within the DevHub we may have multiple `Scratch Orgs`. To create a `Scratch Org` we will execute the following command. 
+    5. Now we are ready to create a Scratch Org. Within the DevHub we may have multiple `Scratch Orgs`. To create a `Scratch Org` we will execute the following command. 
 
     ```s 
     sfdx force:org:create -a lwcScratchOrg -d 30 -f config/project-scratch-def.json -s
@@ -99,6 +99,8 @@
 
     > Note: In this command the `-a` flag still stands for _alias_ so we assign this scratch org a name of _lwsScratchOrg. What **changes** in our flag stucture is with this command the `-d` flag **DOES NOT** mean `default`, but rather `days` or `duration` (in days). The SFDC platform allows a scratch org to exist from 1 - 30 days, after the 30 day limit the scratch org will be deleted. So in this case we are setting a maximum duration of 30 days. We use the `-f` flag to specify the file that is the configuration specification for our Scratch Org. This was the _project-scratch-def.json_ file. To refer to this file we need to specify the path to this file which, if we are in the root directory will simply be _config/project-scratch-def.json_. Finally, we need to tell Salesforce that we want to use the same user `rodriggj@provar.com` that set up the org, so we use the `-s` flag to specify _same default username_.
 
+    <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143151330-29f134a3-c1f0-43dc-b71e-cc8a213067be.png" width="450"></p>
+    
 <sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
 
 ----
