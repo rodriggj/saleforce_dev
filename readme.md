@@ -4,10 +4,7 @@
 1. [Lightning Web Components](https://github.com/rodriggj/saleforce_dev#lightning-web-components)
 
 ---- 
-## Lightning Web Components
-
-### What is _Lighting Web Component_ (LWC) vs. _Aura_. 
-<p align="center"><img src="https://user-images.githubusercontent.com/8760590/143132486-776d36e0-2b80-4d67-b152-f38aa5fa037c.png" width="450"></p>
+## Salesforce Org Setup
 
 ### Setting up the Development Environment 
 
@@ -119,4 +116,42 @@ sfdx force:org:create -a lwcScratchOrg -d 30 -f config/project-scratch-def.json 
 
 <sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
 
+6. Now that the `Scratch Org` has been created you can open the `Scratch Org` from the terminal with the following command. This command will redirect you back to the salesforce UI where you can verify you have a new `Org` by the domain in the URL will be new -- this is the domain of the `Scratch Org`.
+
+```s
+sfdx force:org:open
+```
+
+> NOTE: If you want to see what all the available commands in are from the CLI you can see the help documenation by typing `sfdx commands` in the terminal. 
 ----
+
+### Lightning Web Components Fundamentals
+
+1. Navigate to the `lwc` directory within the folder structure of the `Project` you created.
+
+```s
+cd learning_org/force-app/main/default/lwc
+```
+
+2. Create the `lwc` component with the CLI
+
+```s
+sfdx force:lightning:component:create --type lwc -n helloWorld
+```
+---
+
+### LWC Folder Structure
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/143170486-47f42423-5da2-4f36-be5c-f682b02b654d.png" width="450"/></p>
+
+### App Creation and Component Deployment
+
+1. Go to your scratch org that you created via the URL that was generated during the CLI command. If you closed out of that org, you can reopen by executing the following command: 
+
+```s
+sfdx force:org:open
+```
+
+2. In the `Setup` screen, use the `Search` filter and query for `App Manager`. Click `New Lightning App` and advance through the wizard. You **Do Not** need to add any _Navigation Items_. Also, when presented with the option to add _User Profiles_ you **Only Need** `System Administrator` role for now. 
+
+3. Now that you've created the _Application_, you will now need to add _Pages_ to the application. By default your application will not have any. 
