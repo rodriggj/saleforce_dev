@@ -98,6 +98,7 @@
     ```
 
     > Note: Explanation of the above command...
+    >
     > In this command the `-a` flag still stands for _alias_ so we assign this scratch org a name of _lwsScratchOrg. 
     >
     > The `-d` flag **DOES NOT** mean `default` in this case, but rather `days` or `duration` (in days). The SFDC platform allows a scratch org to exist from 1 - 30 days, after the 30 day limit the scratch org will be deleted. So in this case we are setting a maximum duration of 30 days. 
