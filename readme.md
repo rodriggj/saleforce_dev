@@ -45,6 +45,7 @@
 > NOTE: In Visual Studio Code to initiate an integrated terminal session on a Mac type `Ctrl + ~`. When the terminal session comes up validate that you can execute commands like `sfdx`. If you **CANNOT** you may need to configure your `ENV PATH` to point to the `sfdx` download binaries. 
 
 3. Set up My Domain and Dev Hub
+
     1. Navigate to your developer org login screen which you can access from `login.salesforce.com`, enter login credentials.
 
     2. When the page redirects to the _Setup_ screen. In the left-nav bar at the top is a _Search_ function. Enter `domains`. Select `My Domain ` from the returned list of values.
@@ -58,13 +59,15 @@
     5. You will be redirected to the login screen `login.salesforce.com`. Enter your credentials and you should be logged in to the Org with the URL as the new domain. 
 
 4. Set up a `Project` and `DevHub` 
-    <small>[Developer Documentation](https://developer.salesforce.com/docs/atlas.en-us.234.0.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs.htm)</small>
+
+    <sup><sub>[Developer Documentation](https://developer.salesforce.com/docs/atlas.en-us.234.0.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs.htm)</sup></sub>
 
     1. Go to Visual Studio Code, and in the terminal we want to create a new project for our `Scratch Org`. 
 
     ```javascript
     sfdx force:project:create -n "learning_org"
     ```
+
 > Note: `-n` is the _name_ flag
 
     2. Now we need to associate our project structure with a `Dev Hub`. To do this we can execute the following command
@@ -72,6 +75,7 @@
     ```javascript 
     sfdx force:auth:web:login -a rodrizzledevhub -d
     ```
+
 > Note: `-a` flag is an _alias_ flag, where you will assign a name to the DevHub. The `-d` flag will set this DevHub as _default_. When you execute this command you will be redirected to the front-end SFDC UI. Here you will be asked for your login credentials, possibly a verification code, and verification that the user is allowed to access the Salesforce application via the CLI tooling, SFDX. 
 
 ----
