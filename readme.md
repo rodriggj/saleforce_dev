@@ -66,7 +66,7 @@
     sfdx force:project:create -n "learning_org"
     ```
 
-> Note: `-n` is the _name_ flag
+    > Note: `-n` is the _name_ flag
 
     2. Now we need to associate our project structure with a `Dev Hub`. To do this we can execute the following command
 
@@ -74,6 +74,6 @@
     sfdx force:auth:web:login -a rodrizzledevhub -d
     ```
 
-> Note: `-a` flag is an _alias_ flag, where you will assign a name to the DevHub. The `-d` flag will set this DevHub as _default_. When you execute this command you will be redirected to the front-end SFDC UI. Here you will be asked for your login credentials, possibly a verification code, and verification that the user is allowed to access the Salesforce application via the CLI tooling, SFDX. 
+    > Note: `-a` flag is an _alias_ flag, where you will assign a name to the DevHub. The `-d` flag will set this DevHub as _default_. When you execute this command you will be redirected to the front-end SFDC UI. Here you will be asked for your login credentials, possibly a verification code, and verification that the user is allowed to access the Salesforce application via the CLI tooling, SFDX. 
 
 ----
