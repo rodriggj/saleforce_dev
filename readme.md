@@ -60,7 +60,7 @@
 
 4. Set up a `Project` and `DevHub` <sup><sub>[Developer Documentation](https://developer.salesforce.com/docs/atlas.en-us.234.0.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs.htm)</sup></sub>
 
-    1. Go to Visual Studio Code, and in the terminal we want to create a new project for our `Scratch Org`. 
+    1. Go to Visual Studio Code, and in the terminal we want to create a new project. 
 
     ```s
     sfdx force:project:create -n "learning_org"
@@ -75,6 +75,29 @@
     ```
 
     > Note: `-a` flag is an _alias_ flag, where you will assign a name to the DevHub. The `-d` flag will set this DevHub as _default_. When you execute this command you will be redirected to the front-end SFDC UI. Here you will be asked for your login credentials, possibly a verification code, and verification that the user is allowed to access the Salesforce application via the CLI tooling, SFDX. 
+
+    3. Now within the project directory structure we need to modify the configuration of our project so we can create a scratch org with some data populated in the Org we create. To do this
+    - [ ] Open the file found at `config/project-scratch-def.json` in your code editor
+    - [ ] Below the `features` node in the json file, add another node (aka key:value pair) like this...
+    
+    ```json
+    "hasSampleData": true,
+    ```
+
+    4. Before you receive a `You do not have access ...` error, make sure that before you execute any commands using the CLI to create a scratch org, that you enable the ability to do so in the Salesforce UI. 
+    - [ ] In your Salesforce Org, nav to `Setup`
+    - [ ] Query the Search function for `Dev Hub`
+    - [ ] By default the `Enable Dev Hub` option is **Disabled**, you need to enable this functionality
+
+    <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143151064-0e5e460c-7427-48c2-a709-ad15e64f8bc9.png" width="450"></p>
+
+    5. Now with this config change wer are not ready to create a Scratch Org. Within the DevHub we may have multiple `Scratch Orgs`. To create a `Scratch Org` we will execute the following command. 
+
+    ```s 
+    sfdx force:org:create -a lwcScratchOrg -d 30 -f config/project-scratch-def.json -s
+    ```
+
+    > Note: In this command the `-a` flag still stands for _alias_ so we assign this scratch org a name of _lwsScratchOrg. What **changes** in our flag stucture is with this command the `-d` flag **DOES NOT** mean `default`, but rather `days` or `duration` (in days). The SFDC platform allows a scratch org to exist from 1 - 30 days, after the 30 day limit the scratch org will be deleted. So in this case we are setting a maximum duration of 30 days. We use the `-f` flag to specify the file that is the configuration specification for our Scratch Org. This was the _project-scratch-def.json_ file. To refer to this file we need to specify the path to this file which, if we are in the root directory will simply be _config/project-scratch-def.json_. Finally, we need to tell Salesforce that we want to use the same user `rodriggj@provar.com` that set up the org, so we use the `-s` flag to specify _same default username_.
 
 <sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
 
