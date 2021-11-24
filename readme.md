@@ -28,13 +28,13 @@
 
         - [ ] In a terminal session validate installation by running 
 
-        ```javascript
+        ```s
         sfdx
         ```
 
         - [ ] validate plugin installation also by running 
 
-        ```javascript
+        ```s
         sfdx plugins --core
         ```
 
@@ -62,7 +62,7 @@
 
     1. Go to Visual Studio Code, and in the terminal we want to create a new project for our `Scratch Org`. 
 
-    ```javascript
+    ```s
     sfdx force:project:create -n "learning_org"
     ```
 
@@ -70,7 +70,7 @@
 
     2. Now we need to associate our project structure with a `Dev Hub`. To do this we can execute the following command
 
-    ```javascript 
+    ```s
     sfdx force:auth:web:login -a rodrizzledevhub -d
     ```
 
