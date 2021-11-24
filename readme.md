@@ -7,7 +7,7 @@
 ### Lightning Web Components
 
 #### What is _Lighting Web Component_ (LWC) vs. _Aura_. 
-
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/143132486-776d36e0-2b80-4d67-b152-f38aa5fa037c.png" width="450"></p>
 
 #### Setting up the Development Environment 
 
