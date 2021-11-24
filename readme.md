@@ -18,6 +18,8 @@
 >
 > url: https://provar-b6-dev-ed.my.salesforce.com
 
+---
+
 #### 2. Setup Salesforce DX Environment
 
 1. Install `Visual Studio Code`
@@ -44,6 +46,8 @@
 
 > NOTE: In Visual Studio Code to initiate an integrated terminal session on a Mac type `Ctrl + ~`. When the terminal session comes up validate that you can execute commands like `sfdx`. If you **CANNOT** you may need to configure your `ENV PATH` to point to the `sfdx` download binaries. 
 
+---
+
 #### 3. Set up My Domain and Dev Hub
 
 1. Navigate to your developer org login screen which you can access from `login.salesforce.com`, enter login credentials.
@@ -57,6 +61,8 @@
 4. You will need to wait for Salesforce to `Provision you new Domain`. You will know that it is provisioned with the receipt of an email message from Salesforce. When you do receive this notice you can complete the last step which is to `Deploy your new Domain to Users`. This will be a button that will display and you can click this button. 
 
 5. You will be redirected to the login screen `login.salesforce.com`. Enter your credentials and you should be logged in to the Org with the URL as the new domain. 
+
+---
 
 #### 4. Set up a `Project` and `DevHub` <sup><sub>[Developer Documentation](https://developer.salesforce.com/docs/atlas.en-us.234.0.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs.htm)</sup></sub>
 
