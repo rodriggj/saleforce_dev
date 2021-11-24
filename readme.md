@@ -106,6 +106,8 @@
     > We use the `-f` flag to specify the file that is the configuration specification for our Scratch Org. This was the _project-scratch-def.json_ file. To refer to this file we need to specify the path to this file which, if we are in the root directory will simply be _config/project-scratch-def.json_. 
     >
     >Finally, we need to tell Salesforce that we want to use the same user `rodriggj@provar.com` that set up the org, so we use the `-s` flag to specify _same default username_.
+    > 
+    > A successful result will render an image similar to the following, with a Scratch Org ID, and UserName defined.
 
     <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143151330-29f134a3-c1f0-43dc-b71e-cc8a213067be.png" width="450"></p>
 
