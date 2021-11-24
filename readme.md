@@ -4,21 +4,21 @@
 1. [Lightning Web Components](https://github.com/rodriggj/saleforce_dev#lightning-web-components)
 
 ---- 
-### Lightning Web Components
+## Lightning Web Components
 
-#### What is _Lighting Web Component_ (LWC) vs. _Aura_. 
+### What is _Lighting Web Component_ (LWC) vs. _Aura_. 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143132486-776d36e0-2b80-4d67-b152-f38aa5fa037c.png" width="450"></p>
 
-#### Setting up the Development Environment 
+### Setting up the Development Environment 
 
-##### 1. Sign Up for Salesforce Developer Org [here](https://developer.salesforce.com/signup)
+#### 1. Sign Up for Salesforce Developer Org [here](https://developer.salesforce.com/signup)
 > username: rodriggj@provar.com
 >
 > password: T@********!
 >
 > url: https://provar-b6-dev-ed.my.salesforce.com
 
-##### 2. Setup Salesforce DX Environment
+#### 2. Setup Salesforce DX Environment
 
 1. Install `Visual Studio Code`
     - [ ] Installation instructions for your platform can be found [here](https://code.visualstudio.com/download)
@@ -44,7 +44,7 @@
 
 > NOTE: In Visual Studio Code to initiate an integrated terminal session on a Mac type `Ctrl + ~`. When the terminal session comes up validate that you can execute commands like `sfdx`. If you **CANNOT** you may need to configure your `ENV PATH` to point to the `sfdx` download binaries. 
 
-##### 3. Set up My Domain and Dev Hub
+#### 3. Set up My Domain and Dev Hub
 
 1. Navigate to your developer org login screen which you can access from `login.salesforce.com`, enter login credentials.
 
@@ -58,7 +58,7 @@
 
 5. You will be redirected to the login screen `login.salesforce.com`. Enter your credentials and you should be logged in to the Org with the URL as the new domain. 
 
-##### 4. Set up a `Project` and `DevHub` <sup><sub>[Developer Documentation](https://developer.salesforce.com/docs/atlas.en-us.234.0.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs.htm)</sup></sub>
+#### 4. Set up a `Project` and `DevHub` <sup><sub>[Developer Documentation](https://developer.salesforce.com/docs/atlas.en-us.234.0.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs.htm)</sup></sub>
 
 1. Go to Visual Studio Code, and in the terminal we want to create a new project. 
 
