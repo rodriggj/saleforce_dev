@@ -154,4 +154,6 @@ sfdx force:org:open
 
 2. In the `Setup` screen, use the `Search` filter and query for `App Manager`. Click `New Lightning App` and advance through the wizard. You **Do Not** need to add any _Navigation Items_. Also, when presented with the option to add _User Profiles_ you **Only Need** `System Administrator` role for now. 
 
-3. Now that you've created the _Application_, you will now need to add _Pages_ to the application. By default your application will not have any. 
+3. Now that you've created the _Application_, you will now need to add _Pages_ to the application. By default your application will not have any. To do this go back to _Setup_ and in the Search bar type `Lightning App Builder`
+
+4. Navigate through the wizard. 
