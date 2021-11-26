@@ -206,3 +206,43 @@ sfdx force:source:push
 4. Finally, we can drag and drop our component to our layout manager, click Save, and Navigate back to our `Foobar Application` and there it is ... your first LWC deployed. 
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143603910-f7c1822e-35d7-427e-9963-71ef48c147c9.png" width="450"/></p>
+
+----
+
+### Data Binding & Local Properties
+
+1. Right now in our LWC component it greets the user with a hardcoded message. But what if we want to make this a dynamic message. For example what if the message display's the user name. To do this we need to use 2 sets of files to accomplish a practice called `data binding`. 
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/143604992-b50d07e6-3da1-4a7d-9ff6-4863c5c9ce85.png" width="450"/></p>
+
+2. To implement some data binding, start by opening the `helloWorld.js` file. In here we will set some local properties to our `helloWorld` class. 
+
+```javascript
+// Was
+import { LightningElement } from 'lwc';
+
+export default class HelloWorld extends LightningElement {}
+
+// Change to
+import { LightningElement } from 'lwc';
+
+export default class HelloWorld extends LightningElement {
+    fullName = "Gabe Rodriguez"
+    message = "I hope you have a wonderful day."
+}
+```
+
+3. Now nav to the `helloWord.html` file and implment the data binding
+
+```html
+<template>
+    <div style="border: 1px solid red;">
+        <p>Hello {fullName}</p>
+        <p>This is the hellow world component that we built in our Project Structure.</p>
+        <p>{message}</p>
+        <button>Push Me!</button>
+    </div>
+</template>
+```
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/143606660-6072e007-0ccb-426a-a1e7-7a9a15af09fd.png" width="450"/></p>
