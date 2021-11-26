@@ -203,3 +203,6 @@ sfdx force:source:push
 
 > Note: Once you've pushed the changes to the Salesforce Scratch Org, you should see the `Custom Component` become available to you for use in the UI. If the UI was already opened prior to the `sfdx force:source:push` command you may have to click the _Refresh_ button for the component to appear.
 
+4. Finally, we can drag and drop our component to our layout manager, click Save, and Navigate back to our `Foobar Application` and there it is ... your first LWC deployed. 
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/143603910-f7c1822e-35d7-427e-9963-71ef48c147c9.png" width="450"/></p>
