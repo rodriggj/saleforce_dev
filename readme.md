@@ -157,3 +157,49 @@ sfdx force:org:open
 3. Now that you've created the _Application_, you will now need to add _Pages_ to the application. By default your application will not have any. To do this go back to _Setup_ and in the Search bar type `Lightning App Builder`
 
 4. Navigate through the wizard. 
+
+### Markup our LWC 
+
+1. Go back to project structure in VS code. Open the `lwc > helloWorld > helloWorld.html` file. In this file between the `<template> </template>` tags copy/paste the following code, and save and close this file. 
+
+```html
+<template>
+    <div style="border: 1px solid red;">
+        <p>Hello World</p>
+        <p>This is the hellow world component that we built in our Project Structure.</p>
+        <button>Push Me!</button>
+    </div>
+</template>
+```
+
+2. What we just did is provide some markup to the LWC so on the UI you can see a visual representation of our component. Now we need to tell Salesforce to that this component is available for use. To do this we need to modify our `helloWorld.js-meta-xml` file. Open this file and copy / paste the following code:
+
+```xml
+<!-- Was -->
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>false</isExposed>
+</LightningComponentBundle>
+
+<!-- Change to -->
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+    </targets>
+</LightningComponentBundle>
+```
+
+3. Now that we have the component, specified a target where the component can be used, we need to `push` this to Salesforce so it becomes available for salesforce to use. In the terminal, enter the following command: 
+
+```s
+sfdx force:source:push
+```
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/143603268-d4564c41-d1b2-434f-b637-65926508625e.png" width="450"/></p>
+
+> Note: Once you've pushed the changes to the Salesforce Scratch Org, you should see the `Custom Component` become available to you for use in the UI. If the UI was already opened prior to the `sfdx force:source:push` command you may have to click the _Refresh_ button for the component to appear.
+
