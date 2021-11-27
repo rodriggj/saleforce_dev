@@ -303,3 +303,50 @@ sfdx force:source:push
 5. Go back to the Salesforce Scratch org and refresh and you should see the updates.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143684272-d77cad72-7961-47e6-bf25-ade6da0ffdc5.png" width="450"/></p>
+
+---
+
+### Lighting Web Component Library
+
+1. So the styling of our component looks rough. This is why Salesforce provides a LWC library. In this library they have already built standard components that you can reuse by copy/pasting the code. To show you this ... instead of using our ugly Two-Way Data Binding form, lets us a Salesforce `Card` component. 
+
+Open a browser and search for `Salesforce Lightning Component Library`
+
+2. Once the Library opens, in the _Quick Find_ Search bar, type `Card`. You will see a response in the left-nav-bar that says _Components_ > _lightning_ > _card_, select this element. 
+
+3. The main portion of the page will render details of the `Card` component. In this component at the bottom you will see code, in the _Lighting Mini Playground_. Copy the code between the `<template></template>` tags, which should look like the code below. 
+
+```html
+        <lightning-card  title="Hello">
+            <lightning-button label="New" slot="actions"></lightning-button>
+            <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+            <p slot="footer">Card Footer</p>
+        </lightning-card>
+```
+
+4. Go to your `helloWorld.html` file, and lets use this code with some modifications. We don't want the text that we saw in the Lighting Web Component library because it won't match our properties and we'll have to reconfigure our Two-Way-Data Binding. So let's do the following:
+    - [ ] The body of the `<lightning-card> </lightning-card>` tags should be what we previously had with our input field and title, so copy your previous code and paste it between these 2 tags.
+    - [ ] In the `<lightning-card title="Hello">` change this to `<lightning-card title="LWC Reuse Example">` 
+    - [ ] Delete any previous code so your file looks like this. 
+
+```html
+<template>
+    <lightning-card  title="LWC Reuse Example">
+        <label>Course Title:  </label><input type=text onkeyup={changeHandler}/>
+        <hr>
+        <div>Hello, {fullName} attending the {title} course.</div>
+    </lightning-card>
+</template>
+```
+
+5. Redeploy the new component.
+
+```s
+sfdx force:source:push
+```
+
+6. Your new output looks a little more consistent with what you would ordinarily see on Salesforce layouts, and you reused what other developers have already done for you. 
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/143685061-0e17e48b-5f59-44ea-9207-c797363319a4.png" width="450"/></p>
+
+----

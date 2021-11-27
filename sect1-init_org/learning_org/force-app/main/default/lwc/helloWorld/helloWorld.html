@@ -1,12 +1,7 @@
 <template>
-    <div style="border: 1px solid red;">
-        <!-- <p>Hello {fullName}</p>
-        <p>This is the hellow world component that we built in our Project Structure.</p>
-        <p>{message}</p>
-        <button>Push Me!</button> -->
-        
-        <label>Course Title</label><input type=text onkeyup={changeHandler}/>
+    <lightning-card  title="LWC Reuse Example">
+        <label>Course Title:  </label><input type=text onkeyup={changeHandler}/>
         <hr>
         <div>Hello, {fullName} attending the {title} course.</div>
-    </div>
+    </lightning-card>
 </template>
