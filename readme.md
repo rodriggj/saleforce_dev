@@ -15,6 +15,8 @@
 >
 > url: https://provar-b6-dev-ed.my.salesforce.com
 
+<sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
+
 ---
 
 #### 2. Setup Salesforce DX Environment
@@ -42,6 +44,8 @@
     - [ ] Use the the Search feature to query for _Salesforce Extension Pack_ and install top hit
 
 > NOTE: In Visual Studio Code to initiate an integrated terminal session on a Mac type `Ctrl + ~`. When the terminal session comes up validate that you can execute commands like `sfdx`. If you **CANNOT** you may need to configure your `ENV PATH` to point to the `sfdx` download binaries. 
+
+<sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
 
 ---
 
