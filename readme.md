@@ -246,3 +246,60 @@ export default class HelloWorld extends LightningElement {
 ```
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143606660-6072e007-0ccb-426a-a1e7-7a9a15af09fd.png" width="450"/></p>
+
+### Two Way Data Binding
+
+1. So the above example still has the static input problem. Yes it dynamically passes data from the `javascript` file to the `html` file, but the input is still hardcoded. So how do we allow the user to input data in real-time and the html input update on the screen? To do this you need Two-Way Data Binding. 
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/143683364-cc4a4378-0ee5-47de-8a26-2f112c2f87ef.png" width="450"/></p>
+
+2. Here we will modify the _javascript_ to include a `method`. A method is simply code that provides some behavior to your application. In this case we want to _change the screen input_ so we need a _changeHandler_ method. In the method we will ask for some initiating activity called an _event_. The event in this case is the typing of new input into the screen. When we receive this _event_ we will tell the _html_ to update the screen value on the UI. 
+
+We will display a new message this time, where we are asking the user to input a course title. So in the _javascript_ we need to add a _title_ property to the class, and use it to store the value the user inputs. Modify your `helloWorld.js` file with the following code: 
+
+```javascript
+// Was
+import { LightningElement } from 'lwc';
+
+export default class HelloWorld extends LightningElement {
+    fullName = "Gabe Rodriguez"
+    message = "I hope you have a wonderful day."
+}
+
+// Change to...
+import { LightningElement } from 'lwc';
+
+export default class HelloWorld extends LightningElement {
+    fullName = "Gabe Rodriguez"
+    message = "I hope you have a wonderful day."
+    title = "aura"
+
+    changeHandler(event){
+        this.title = event.target.value
+    }
+}
+```
+
+3. Now go to the `helloWorld.html` file. Here we need to modify the _presentation_ of the UI with 2 new items. The first is an _input_ field allowing the user to type in some new _title_ of a course. The second is the sentence (_string_) that will display the input dynamically. In the file enter the following code...
+
+```html
+<template>
+    <div style="border: 1px solid red;">
+        <label>Course Title</label><input type=text onkeyup={changeHandler}/>
+        <hr>
+        <div>Hello, {fullName} attending the {title} course.</div>
+    </div>
+</template>
+```
+
+> Note: The `fullName` and the new property `title` are in the interpolation syntax `{ }`, and will be read from the javascript `changeHandler` method or the properties in the Javascript class and passed to the `html`. 
+
+4. Now push these changes back to the Scratch Org. 
+
+```s
+sfdx force:source:push
+```
+
+5. Go back to the Salesforce Scratch org and refresh and you should see the updates.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/143684272-d77cad72-7961-47e6-bf25-ade6da0ffdc5.png" width="450"/></p>
