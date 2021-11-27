@@ -1,7 +1,10 @@
 <template>
     <lightning-card  title="LWC Reuse Example">
-        <label>Course Title:  </label><input type=text onkeyup={changeHandler}/>
-        <hr>
-        <div>Hello, {fullName} attending the {title} course.</div>
+        <div class="slds-m-around_x-small">
+            <!-- <label>Course Title:  </label><input type=text onkeyup={changeHandler}/> -->
+            <lightning-input type="text" label="Enter some text" placeholder="type here..." onkeyup={changeHandler} required></lightning-input>
+            <hr>
+            <div>Hello, {fullName} attending the {title} course.</div>
+        </div>
     </lightning-card>
 </template>

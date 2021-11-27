@@ -371,6 +371,47 @@ sfdx force:source:push
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143685061-0e17e48b-5f59-44ea-9207-c797363319a4.png" width="450"/></p>
 
+7. You can see that the margins/padding are compressed in our card. For this we can utilize another library to help with our `CSS` styling, which can be found here [Salesforce Design System](https://www.lightningdesignsystem.com/). Again we can query for `margin`. There are multiple margin options, but we want the margin to be _Around_ our entire card, so if you scroll down you will see [Around](https://www.lightningdesignsystem.com/utilities/margin/#Location-Around), and we'll select the `<div class="slds-m-around_x-small"></div>` tag. We can go back and add this to our component like this and redeploy. 
+
+```html
+<template>
+    <lightning-card  title="LWC Reuse Example">
+        <div class="slds-m-around_x-small">
+            <label>Course Title:  </label><input type=text onkeyup={changeHandler}/>
+            <hr>
+            <div>Hello, {fullName} attending the {title} course.</div>
+        </div>
+    </lightning-card>
+</template>
+```
+
+```s
+sfdx force:source:push
+```
+
+8. You can continue to iterate on using these components for example you can use an `input` to add to you component. 
+
+```html
+<template>
+    <lightning-card  title="LWC Reuse Example">
+        <div class="slds-m-around_x-small">
+            <!-- <label>Course Title:  </label><input type=text onkeyup={changeHandler}/> -->
+            <lightning-input type="text" label="Enter some text" placeholder="type here..." onkeyup={changeHandler} required></lightning-input>
+            <hr>
+            <div>Hello, {fullName} attending the {title} course.</div>
+        </div>
+    </lightning-card>
+</template>
+```
+
+Here you see this one has embedded validation indicating that a mandatory field is now empty. 
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/143686576-a3409ed1-880e-47c6-a71c-a15020a96a4e.png" width="450"/></p>
+
+When you populate the field the error goes away and the text renders just like before. 
+
+<p align="center"><img src="https://user-images.githubusercontent.com/8760590/143686613-4f96d88a-b8d1-4f2e-88b0-d4f1300c4888.png" width="450"/></p>
+
 <sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
 
 ----
