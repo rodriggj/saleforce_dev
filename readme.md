@@ -306,7 +306,7 @@ sfdx force:source:push
 
 ---
 
-### Lighting Web Component Library
+### Lighting Web Component Library <sup><sub>[LWC Component Library](https://developer.salesforce.com/docs/component-library/overview/components)</sub></sup>
 
 1. So the styling of our component looks rough. This is why Salesforce provides a LWC library. In this library they have already built standard components that you can reuse by copy/pasting the code. To show you this ... instead of using our ugly Two-Way Data Binding form, lets us a Salesforce `Card` component. 
 
