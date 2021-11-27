@@ -59,6 +59,8 @@
 
 5. You will be redirected to the login screen `login.salesforce.com`. Enter your credentials and you should be logged in to the Org with the URL as the new domain. 
 
+<sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
+
 ---
 
 #### 4. Set up a `Project` and `DevHub` <sup><sub>[Developer Documentation](https://developer.salesforce.com/docs/atlas.en-us.234.0.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs.htm)</sup></sub>
@@ -114,8 +116,6 @@ sfdx force:org:create -a lwcScratchOrg -d 30 -f config/project-scratch-def.json 
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143151330-29f134a3-c1f0-43dc-b71e-cc8a213067be.png" width="450"></p>
 
-<sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
-
 6. Now that the `Scratch Org` has been created you can open the `Scratch Org` from the terminal with the following command. This command will redirect you back to the salesforce UI where you can verify you have a new `Org` by the domain in the URL will be new -- this is the domain of the `Scratch Org`.
 
 ```s
@@ -123,6 +123,9 @@ sfdx force:org:open
 ```
 
 > NOTE: If you want to see what all the available commands in are from the CLI you can see the help documenation by typing `sfdx commands` in the terminal. 
+
+<sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
+
 ----
 
 ### Lightning Web Components Fundamentals
@@ -138,6 +141,9 @@ cd learning_org/force-app/main/default/lwc
 ```s
 sfdx force:lightning:component:create --type lwc -n helloWorld
 ```
+
+<sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
+
 ---
 
 ### LWC Folder Structure
@@ -157,6 +163,10 @@ sfdx force:org:open
 3. Now that you've created the _Application_, you will now need to add _Pages_ to the application. By default your application will not have any. To do this go back to _Setup_ and in the Search bar type `Lightning App Builder`
 
 4. Navigate through the wizard. 
+
+<sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
+
+---
 
 ### Markup our LWC 
 
@@ -207,6 +217,8 @@ sfdx force:source:push
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143603910-f7c1822e-35d7-427e-9963-71ef48c147c9.png" width="450"/></p>
 
+<sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
+
 ----
 
 ### Data Binding & Local Properties
@@ -246,6 +258,10 @@ export default class HelloWorld extends LightningElement {
 ```
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143606660-6072e007-0ccb-426a-a1e7-7a9a15af09fd.png" width="450"/></p>
+
+<sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
+
+---
 
 ### Two Way Data Binding
 
@@ -304,6 +320,8 @@ sfdx force:source:push
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143684272-d77cad72-7961-47e6-bf25-ade6da0ffdc5.png" width="450"/></p>
 
+<sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
+
 ---
 
 ### Lighting Web Component Library <sup><sub>[LWC Component Library](https://developer.salesforce.com/docs/component-library/overview/components)</sub></sup>
@@ -348,5 +366,7 @@ sfdx force:source:push
 6. Your new output looks a little more consistent with what you would ordinarily see on Salesforce layouts, and you reused what other developers have already done for you. 
 
 <p align="center"><img src="https://user-images.githubusercontent.com/8760590/143685061-0e17e48b-5f59-44ea-9207-c797363319a4.png" width="450"/></p>
+
+<sup><sub>[Back To Top](https://github.com/rodriggj/saleforce_dev#content)</sup><sub>
 
 ----
